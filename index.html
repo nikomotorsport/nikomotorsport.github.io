@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Niko Motorsport - Mecanizado de Precisión</title>
-    <!-- Aquí conectamos el diseño CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -18,51 +17,77 @@
         </a>
     </header>
 
-    <!-- GALERÍA DE PIEZAS -->
+    <!-- SECCIÓN 1: NUESTRO TRABAJO -->
     <main class="container">
         <h2 class="section-title">Nuestro Trabajo</h2>
         <div class="gallery">
             
-            <!-- PIEZA 1 -->
             <div class="card">
-                <!-- Cambia el enlace de "src" por el enlace de tu foto cuando la subas a GitHub -->
                 <img src="https://via.placeholder.com/400x300/cccccc/333333?text=Foto+Pieza+1" alt="Pieza mecanizada 1" class="gallery-img" onclick="abrirModal(this.src)">
                 <div class="card-info">
                     <h3>Polea Personalizada</h3>
                     <p><strong>Material:</strong> Aluminio 7075<br>
                     Mecanizado CNC de alta precisión para mejora de rendimiento en competición.</p>
-                    <a href="https://wa.me/573000000000?text=Hola,%20me%20interesa%20una%20pieza%20como%20la%20Polea%20Personalizada." target="_blank" class="btn-whatsapp">📲 Cotizar esta pieza</a>
                 </div>
             </div>
 
-            <!-- PIEZA 2 -->
             <div class="card">
                 <img src="https://via.placeholder.com/400x300/cccccc/333333?text=Foto+Pieza+2" alt="Pieza mecanizada 2" class="gallery-img" onclick="abrirModal(this.src)">
                 <div class="card-info">
                     <h3>Eje de Transmisión</h3>
                     <p><strong>Material:</strong> Acero Inoxidable 304<br>
                     Fabricado bajo tolerancias estrictas. Resistente a altas torsiones.</p>
-                    <a href="https://wa.me/573000000000?text=Hola,%20me%20interesa%20fabricar%20un%20Eje%20de%20Transmisión." target="_blank" class="btn-whatsapp">📲 Cotizar esta pieza</a>
                 </div>
             </div>
 
-            <!-- PIEZA 3 -->
             <div class="card">
                 <img src="https://via.placeholder.com/400x300/cccccc/333333?text=Foto+Pieza+3" alt="Pieza mecanizada 3" class="gallery-img" onclick="abrirModal(this.src)">
                 <div class="card-info">
                     <h3>Soporte de Motor</h3>
                     <p><strong>Material:</strong> Acero 1045<br>
                     Diseño a medida para adaptación de motor, corte y mecanizado pesado.</p>
-                    <a href="https://wa.me/573000000000?text=Hola,%20me%20interesa%20fabricar%20un%20Soporte%20de%20Motor." target="_blank" class="btn-whatsapp">📲 Cotizar esta pieza</a>
                 </div>
             </div>
-
-            <!-- Puedes copiar y pegar todo el bloque <div class="card">...</div> para agregar más piezas -->
 
         </div>
     </main>
 
-    <!-- VENTANA EMERGENTE (MODAL) PARA AMPLIAR FOTOS -->
+    <!-- SECCIÓN 2: PROYECTOS EN DESARROLLO -->
+    <section class="container">
+        <h2 class="section-title">Proyectos en Desarrollo</h2>
+        <div class="gallery">
+            
+            <div class="card">
+                <img src="https://via.placeholder.com/400x300/cccccc/333333?text=Proyecto+1" alt="Proyecto en desarrollo 1" class="gallery-img" onclick="abrirModal(this.src)">
+                <div class="card-info">
+                    <h3>Sistema de Admisión</h3>
+                    <p><strong>Estado:</strong> En fase de prototipado<br>
+                    Diseño CAD y primeras pruebas de flujo de aire para optimización de motor.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://via.placeholder.com/400x300/cccccc/333333?text=Proyecto+2" alt="Proyecto en desarrollo 2" class="gallery-img" onclick="abrirModal(this.src)">
+                <div class="card-info">
+                    <h3>Brazos de Suspensión</h3>
+                    <p><strong>Estado:</strong> Selección de materiales<br>
+                    Rediseño estructural para reducir peso manteniendo la rigidez torsional.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- PIE DE PÁGINA: REDES SOCIALES -->
+    <footer class="footer">
+        <p>Conoce más de nuestro día a día en el taller:</p>
+        <div class="social-links">
+            <a href="https://instagram.com/TU_USUARIO" target="_blank" class="btn-social insta">📷 Instagram</a>
+            <a href="https://tiktok.com/@TU_USUARIO" target="_blank" class="btn-social tiktok">🎵 TikTok</a>
+        </div>
+    </footer>
+
+    <!-- VENTANA EMERGENTE (MODAL) -->
     <div id="modal" class="modal">
         <span class="cerrar" onclick="cerrarModal()">&times;</span>
         <img class="modal-content" id="img-ampliada">
@@ -70,11 +95,10 @@
 
     <!-- BOTÓN FLOTANTE DE WHATSAPP -->
     <a href="https://wa.me/573000000000" target="_blank" class="whatsapp-flotante">
-        <!-- Logo de WhatsApp oficial sacado de Wikimedia -->
         <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="35">
     </a>
 
-    <!-- SCRIPT: LÓGICA PARA AMPLIAR LAS FOTOS -->
+    <!-- SCRIPT DEL MODAL -->
     <script>
         function abrirModal(src) {
             document.getElementById("modal").style.display = "flex";
