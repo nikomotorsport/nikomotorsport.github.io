@@ -1,0 +1,170 @@
+/* RESETEO BÁSICO */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4; /* Fondo gris claro limpio */
+    color: #333;
+}
+
+/* ENCABEZADO ESTILO INDUSTRIAL/RACING */
+.header {
+    background-color: #1a1a1a; /* Gris oscuro/Negro */
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+    border-bottom: 5px solid #d32f2f; /* Línea roja deportiva */
+}
+
+.header h1 {
+    font-size: 3em;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.header p {
+    font-size: 1.2em;
+    margin-bottom: 25px;
+    color: #b3b3b3;
+}
+
+/* ESTILOS DE BOTONES WHATSAPP */
+.btn-whatsapp-header, .btn-whatsapp {
+    background-color: #25D366;
+    color: white;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 5px;
+    font-weight: bold;
+    display: inline-block;
+    transition: background 0.3s;
+}
+
+.btn-whatsapp-header:hover, .btn-whatsapp:hover {
+    background-color: #1DA851;
+}
+
+.btn-whatsapp {
+    width: 100%; /* Botón ancho dentro de la tarjeta */
+    text-align: center;
+    margin-top: 15px;
+}
+
+/* CONTENEDOR DE LA GALERÍA */
+.container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.2em;
+    color: #1a1a1a;
+    text-transform: uppercase;
+}
+
+/* CUADRÍCULA (GRID) - SE ADAPTA SOLA AL TELÉFONO O PC */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+/* TARJETAS DE PIEZAS */
+.card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px); /* Se levanta un poco al pasar el mouse */
+    box-shadow: 0 12px 20px rgba(0,0,0,0.15);
+}
+
+.gallery-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover; /* Recorta la foto perfecto sin deformarla */
+    cursor: pointer; /* Cambia el cursor a una manito */
+}
+
+.card-info {
+    padding: 20px;
+}
+
+.card-info h3 {
+    margin-bottom: 10px;
+    color: #1a1a1a;
+    font-size: 1.4em;
+}
+
+.card-info p {
+    font-size: 0.95em;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* BOTÓN FLOTANTE WHATSAPP (ESQUINA INFERIOR DERECHA) */
+.whatsapp-flotante {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background-color: #25D366;
+    border-radius: 50%;
+    padding: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    transition: transform 0.3s;
+}
+
+.whatsapp-flotante:hover {
+    transform: scale(1.1); /* Crece un poquito al pasar el mouse */
+}
+
+/* VENTANA EMERGENTE (MODAL) PARA AMPLIAR FOTOS */
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.85); /* Fondo oscuro transparente */
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 5px;
+    border: 3px solid #333;
+}
+
+.cerrar {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    color: white;
+    font-size: 50px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.cerrar:hover {
+    color: #d32f2f;
+}
