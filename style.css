@@ -1,7 +1,7 @@
 /* CARGA DE FUENTE PERSONALIZADA PIRULEN */
 @font-face {
     font-family: 'Pirulen';
-    src: url('pirulen.ttf') format('truetype'); /* Asegúrate de que el archivo se llame exactamente así */
+    src: url('pirulen.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
 }
